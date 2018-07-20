@@ -6,8 +6,17 @@ node{
 	
 	stage('Compile-Package'){
 	def mvnHome = tool name: 'maven-1', type: 'maven'
-	sh "${mvnHome}/bin/mvn clean"
+	sh "${mvnHome}/bin/mvn package"
 
+	}
+	
+	stage('Email-Notification'){
+	mail bcc: '', body: '''Hi Team,
+	These mail mail regarding jenkin-job
+
+	thanks,
+	Reddy ''', cc: '', from: '', replyTo: '', subject: 'jenkins-job', to: 'svsreddy.aws@gmail.com'
+	
 	}
 
 }
