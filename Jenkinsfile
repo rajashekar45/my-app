@@ -12,7 +12,7 @@ node{
 	
 	stage('Email-Notification'){
 	mail bcc: '', body: '''Hi Team,
-	These mail mail regarding jenkin-job
+	These mail regarding jenkin-job
 
 	thanks,
 	Reddy ''', cc: '', from: '', replyTo: '', subject: 'jenkins-job', to: 'svsreddy.aws@gmail.com'
